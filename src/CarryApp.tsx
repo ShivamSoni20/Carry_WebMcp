@@ -32,7 +32,7 @@ export function CarryApp() {
 
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "CARRY — Your preferences travel with your agent";
+    document.title = "CARRY — Your preferences travel with your agent, not with every website.";
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -47,7 +47,7 @@ export function CarryApp() {
       <main>
         <section className="carry-hero" aria-labelledby="carry-title">
           <p className="carry-eyebrow">A WebMCP exploration</p>
-          <h1 id="carry-title">Your preferences travel<br />with your <em>agent,</em><br />not every website.</h1>
+          <h1 id="carry-title">Your preferences travel<br />with your <em>agent,</em><br />not with every website.</h1>
           <p className="carry-intro">One user-owned set of intentions. Each website exposes what it supports. Your agent shares only what is relevant.</p>
           <div className="carry-flow" aria-label="CARRY architecture"><span>You</span><i>→</i><span>Agent</span><i>→</i><span>Site capability</span><i>→</i><span>Visible change</span></div>
         </section>
@@ -70,4 +70,3 @@ export function CarryApp() {
     </div>
   );
 }
-

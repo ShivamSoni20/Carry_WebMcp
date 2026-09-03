@@ -1199,7 +1199,7 @@ CARRY itself may only need a tiny intro screen:
 ```text
 CARRY
 
-Your preferences travel with your agent.
+Your preferences travel with your agent, not with every website.
 
 Demo profile:
 Reduced motion

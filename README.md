@@ -4,7 +4,9 @@
 
 Every website currently learns you separately: interface behavior, privacy choices, pricing preferences, dietary needs, marketing consent, and browsing history. That duplicates settings—and behavioral profiles—across the web.
 
-CARRY explores a WebMCP-native alternative:
+CARRY explores portable personalization where a browser agent carries user intent and WebMCP-enabled websites expose the adaptations they support.
+
+WebMCP exposes site capabilities; it does not store or transport the portable profile itself.
 
 ```text
 User owns preference intent
@@ -26,7 +28,7 @@ This is not just an LLM demo. The value comes from each website explicitly ownin
 
 ## Demo
 
-Open `/carry`, then `/`, `/near`, and `/table`. Ask the browser agent:
+Start at [CARRY on Vercel](https://webmcp-mu.vercel.app/carry), then visit `/`, `/near`, and `/table`. These are distinct demo experiences on one production origin, not evidence of interoperability across separate production origins. Ask the browser agent:
 
 > “Use my normal preferences on Luma, Near, and Table.”
 
@@ -43,7 +45,7 @@ Near provides the human-and-agent clarification moment. The agent maps “approx
 
 > **Portable personalization without portable surveillance.**
 
-CARRY does not push a universal user profile into websites:
+This is the product direction and architecture being demonstrated, not an absolute privacy guarantee:
 
 ```text
 website advertises capability
@@ -53,7 +55,9 @@ agent selects one relevant preference
 narrow tool call
 ```
 
-Luma never receives food, location, or pricing preferences. Near never receives food or reading preferences. Table never receives location, pricing, or reading preferences. There is no `apply_profile`, remote profile server, account, database, or cross-site synchronization layer.
+No destination WebMCP tool receives the complete CARRY profile. The agent invokes only the preference relevant to that site's advertised capability.
+
+This claim concerns tool inputs, not everything a website could otherwise know about a user. There is no `apply_profile`, remote profile server, account, database, or cross-site synchronization layer. CARRY is a prototype, not an established browser standard or a claim to have invented portable personalization.
 
 ## Implementation and security
 
@@ -91,7 +95,7 @@ npm test
 npm run build
 ```
 
-Netlify configuration includes SPA fallback for direct access to `/carry`, `/near`, and `/table`, plus the required WebMCP headers.
+Production is hosted on **Vercel**. `vercel.json` configures SPA rewrites for direct access to `/carry`, `/`, `/near`, and `/table`, and sends `Origin-Agent-Cluster: ?1` and `Permissions-Policy: tools=(self)`. `netlify.toml` is optional compatibility configuration only; Netlify is not the live deployment.
 
 ## Tested clients
 
@@ -105,4 +109,3 @@ OpenAI Codex assisted with implementation, test authoring, browser verification,
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
-

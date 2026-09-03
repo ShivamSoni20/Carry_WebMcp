@@ -1,4 +1,4 @@
-# CARRY — Devpost draft
+# CARRY — Hackathon submission
 
 ## Project name
 
@@ -10,7 +10,7 @@ Your preferences travel with your agent, not with every website.
 
 ## Short description
 
-Every website currently learns users separately. CARRY explores a WebMCP-native alternative where a user's browser agent carries their preferences and maps only relevant intent onto the semantic capabilities each website explicitly supports.
+CARRY explores portable personalization where a browser agent carries user intent and WebMCP-enabled websites expose the adaptations they support.
 
 ## The problem
 
@@ -26,7 +26,7 @@ CARRY begins with a fictional user-owned intent profile. The browser agent reads
 
 ## Why this matters
 
-CARRY treats personalization as something the user can bring to the web, rather than something every website must independently infer and store. It demonstrates **portable personalization without portable surveillance**.
+CARRY treats personalization as something the user can bring to the web, rather than something every website must independently infer and store. **Portable personalization without portable surveillance.** This describes the product direction and architecture being demonstrated, not an absolute privacy guarantee.
 
 ## Why WebMCP?
 
@@ -54,11 +54,13 @@ The user's intent says “approximate location only.” Near supports precise, c
 
 ## Privacy
 
-The downstream sites never receive the complete profile. Luma receives only interface calls; Near receives only location, pricing, marketing, and history calls; Table receives only food, marketing, and history calls. There is no account, cloud profile, database, remote MCP server, GPS request, or real health data.
+No destination WebMCP tool receives the complete CARRY profile. The agent invokes only the preference relevant to that site's advertised capability.
+
+This is a claim about tool inputs, not a guarantee that destination websites can never know other user information. The browser agent carries intent; WebMCP itself does not store or transport user preferences. There is no account, cloud profile, database, remote MCP server, GPS request, or real health data.
 
 ## What is novel
 
-CARRY treats personalization as something the user can bring to the web, rather than something every website must independently infer and store. It is a prototype exploring a WebMCP-native architecture—not a claim that this workflow is already an implemented browser standard.
+CARRY demonstrates a specific WebMCP-based approach to portable personalization; it does not claim to have invented the concept or to be an established browser standard. Luma, Near, and Table are distinct experiences served as routes on one Vercel origin. The verified journey demonstrates route-specific capability mapping and isolation, not interoperability across separate production origins.
 
 ## Testing instructions
 
@@ -82,12 +84,10 @@ CARRY treats personalization as something the user can bring to the web, rather 
 
 Use `DEMO_SCRIPT.md` for the timed 2:40 script: product value first, then CARRY profile, Luma, Near clarification, Table uncertainty, privacy recap, brief WebMCP proof, and architecture close.
 
-## Draft readiness
+## Submission links and remaining materials
 
-- Repository URL: **TODO**
-- Public demo URL: **TODO after deployment**
-- Public YouTube demo URL: **TODO**
-- Screenshots/thumbnail: **TODO**
-- Official Devpost form fields: **TODO verify against the live form before submission**
-- Submission status: Local draft only; nothing has been sent to Devpost.
-
+- Repository URL: [ShivamSoni20/Carry_WebMcp](https://github.com/ShivamSoni20/Carry_WebMcp)
+- Production URL: [CARRY on Vercel](https://webmcp-mu.vercel.app/carry)
+- Public YouTube demo URL: **Pending — no uploaded video URL has been confirmed.**
+- Screenshots/thumbnail: Final assets to be confirmed.
+- Official Devpost form fields: Verify and complete on the submission form.

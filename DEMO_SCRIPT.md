@@ -4,7 +4,7 @@
 
 **Visual:** CARRY profile, quickly revealing the three destination sites.
 
-**Narration:** “Every website makes you teach it who you are again. CARRY explores a WebMCP-native alternative: your preferences travel with your agent.”
+**Narration:** “Your preferences travel with your agent, not with every website. This is CARRY.”
 
 ## 0:10–0:20 — One prompt
 
@@ -16,7 +16,7 @@
 
 **Visual:** Open Luma. Briefly show capability discovery, then reduced motion, autoplay off, compact reading, and large targets.
 
-**Narration:** “Luma advertises four interface capabilities, so the agent applies only interface preferences. Food, location, and pricing never reach this page.”
+**Narration:** “Luma advertises four interface capabilities, so the agent sends only the relevant interface values through its WebMCP tools.”
 
 ## 0:50–1:25 — Near
 
@@ -40,7 +40,7 @@
 
 **Visual:** Fast recap of all three adapted interfaces and their preference summaries.
 
-**Narration:** “Each site exposed a different capability surface. None received the user's complete profile. Only relevant intent crossed each boundary.”
+**Narration:** “No destination WebMCP tool receives the complete CARRY profile. The agent invokes only the preference relevant to that site's advertised capability.”
 
 ## 2:05–2:25 — WebMCP proof
 
@@ -58,5 +58,10 @@
 
 # CARRY
 
-**Bring your preferences. Don't rebuild them.**
+**Your preferences travel with your agent, not with every website.**
 
+## Claim boundaries for narration and captions
+
+CARRY explores portable personalization where a browser agent carries user intent and WebMCP-enabled websites expose the adaptations they support. WebMCP itself does not store or transport the profile. The three demo sites run as routes on one production origin; this is not proof of separate-origin interoperability or a claim to have invented portable personalization.
+
+“Portable personalization without portable surveillance.” is the product direction and architecture being demonstrated, not an absolute privacy guarantee about what websites can know.
