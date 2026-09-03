@@ -1,0 +1,21 @@
+{
+  "id": "carry-three-site-journey",
+  "prompt": "Use my normal preferences on Luma, Near, and Table.",
+  "steps": [
+    { "route": "/carry", "tools": ["get_portable_preferences"], "action": "Read portable intent once." },
+    { "route": "/", "tools": ["get_supported_preferences", "get_current_preferences", "set_motion_mode", "set_autoplay", "set_reading_density", "set_target_size"], "disclosedCategories": ["interface"] },
+    { "route": "/near", "tools": ["get_supported_preferences", "set_location_precision", "set_price_display", "set_marketing", "set_history_retention", "set_city when dynamically available"], "disclosedCategories": ["privacy.location", "privacy.marketing", "privacy.historyRetention", "pricing"], "humanCheckpoint": "Ask for city after CITY_REQUIRED; use Sagar only after the human supplies it." },
+    { "route": "/table", "tools": ["get_supported_preferences", "set_dietary_mode", "set_peanut_warning", "set_marketing", "set_history_retention"], "disclosedCategories": ["food", "privacy.marketing", "privacy.historyRetention"] }
+  ],
+  "successConditions": [
+    "Profile is read only from CARRY.",
+    "Each destination receives only narrow relevant values.",
+    "Near requests clarification instead of guessing a city.",
+    "All three real interfaces visibly change.",
+    "No destination receives the complete profile object.",
+    "No route retains stale tools.",
+    "No DOM actuation is used for supported preference operations.",
+    "Manual overrides are immediately observable through WebMCP."
+  ]
+}
+
